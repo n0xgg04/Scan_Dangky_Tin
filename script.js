@@ -18,16 +18,16 @@ const DelayTime = (sec) => {
 const luu = (monhoc) => { toDKSelectedChange(monhoc) }
 
 //CONFIG ---------------------------------------------------
-const monIdSet = 'chk_BAS115126    ';
-const tuDongLuu = false;
+const monIdSet = 'chk_BAS115126    '; //In mon
+const tuDongLuu = false; //Tu dong luu
 //----------------------------------------------------------
 
 
 const task = async () => {
-    switchTo('BAS1224')
+    switchTo('BAS1224') //Chuyen sang Tab mon Vat ly
     await DelayTime(3000)
     switchTo('BAS1151')
-    await DelayTime(2000)
+    await DelayTime(2000) //Tab chua mon can dangky
     var selectedSub = document.getElementById(monIdSet)
     if (!selectedSub.disabled) {
         selectedSub.checked = 1;
